@@ -14,6 +14,7 @@ total.emissions.baltimore = NEI.DT[, sum(Emissions), by=c("year", "fips")][fips 
 png(filename="plot2.png", width=480, height=480, units="px")
 
 ## Plot emissions per year using basic package
+## Total emissions from PM2.5 decreased in the Baltimore City, Maryland from 1999 to 2008, even though there was a blip in the year 2005
 plot(total.emissions.baltimore$year, total.emissions.baltimore$V1, type = "b", pch = 19, col = "blue", ylab = "Emissions", xlab = "Year", main = "Baltimore Emissions")
 
 # Close the PNG device

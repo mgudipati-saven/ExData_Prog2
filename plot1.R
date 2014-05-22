@@ -14,6 +14,7 @@ total.emissions = NEI.DT[, sum(Emissions), by="year"]
 png(filename="plot1.png", width=480, height=480, units="px")
 
 ## Plot emissions per year using basic package
+## Total emissions from PM2.5 decreased in the United States from 1999 to 2008
 plot(total.emissions, type = "b", pch = 19, col = "blue", ylab = "Emissions", xlab = "Year", main = "Annual Emissions")
 
 # Close the PNG device

@@ -14,6 +14,8 @@ total.emissions.baltimore.type = NEI.DT[, sum(Emissions), by=c("year", "fips", "
 png(filename="plot3.png", width=480, height=480, units="px")
 
 ## Plot emissions per year grouped by source type using ggplot2 plotting system
+## NON-ROAD, NONPOINT, ON-ROAD type sources have seen decreases in emissions.
+## POINT type has seen increased emissions until year 2005 and then decreased.
 g = ggplot(total.emissions.baltimore.type, aes(year, V1))
 g + geom_point() + 
   geom_line(aes(color = type)) + 

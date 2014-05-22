@@ -18,7 +18,8 @@ motor.vehicle.emissions.baltimore = NEI.DT[SCC %in% motor.vehicle.scc, sum(Emiss
 # Open the PNG device
 png(filename="plot5.png", width=480, height=480, units="px")
 
-## Plot emissions per year grouped by source type using ggplot2 plotting system
+## Plot emissions per year using ggplot2 plotting system
+## Emissions from motor vehicle sources decreased from 1999-2008 in Baltimore City, even though there was a blip in the year 2005.
 g = ggplot(motor.vehicle.emissions.baltimore, aes(year, V1))
 g + geom_point() + 
   geom_line() +
