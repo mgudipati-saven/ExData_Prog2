@@ -27,6 +27,7 @@ png(filename="plot6.png", width=480, height=480, units="px")
 ## Plot emissions per year grouped by fips using ggplot2 plotting system
 ## Use log scale to plot rate of change.
 ## Observe steeper slopes for Baltimore City, indicating it has seen greater changes.
+library(ggplot2)
 g = ggplot(motor.vehicle.emissions[fips == "24510" | fips == "06037"], aes(year, log(V1)))
 g + geom_point() + 
   geom_line(aes(color = fips)) +

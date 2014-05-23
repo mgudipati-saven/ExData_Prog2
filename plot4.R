@@ -20,6 +20,7 @@ png(filename="plot4.png", width=480, height=480, units="px")
 
 ## Plot emissions per year using ggplot2 plotting system
 ## Emissions from coal combustion related sources decreased significantly from 1999-2008.
+library(ggplot2)
 g = ggplot(coal.emissions, aes(year, V1))
 g + geom_point() + 
   geom_line() +
